@@ -7,6 +7,7 @@
       "uuidString" : "14DDDAA4-A153-4153-96DF-97B193C74A2B"
     }
   ],
+<<<<<<< Updated upstream
   "creatorBuild" : "34365",
   "files" : {
     "\/assets\/chonk.png" : {
@@ -14,6 +15,15 @@
       "iS" : 1088557,
       "oA" : 0,
       "oAP" : "\/assets\/chonk.png",
+=======
+  "creatorBuild" : "34472",
+  "files" : {
+    "\/assets\/ASCBirthday.png" : {
+      "ft" : 32768,
+      "iS" : 239774,
+      "oA" : 0,
+      "oAP" : "\/assets\/ASCBirthday.png",
+>>>>>>> Stashed changes
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -22,6 +32,126 @@
       "q" : 100,
       "rq" : 75
     },
+<<<<<<< Updated upstream
+=======
+    "\/assets\/FridayNightLightsOn.png" : {
+      "ft" : 32768,
+      "iS" : 653399,
+      "oA" : 0,
+      "oAP" : "\/assets\/FridayNightLightsOn.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/NeedTickets.png" : {
+      "ft" : 32768,
+      "iS" : 25988156,
+      "oA" : 0,
+      "oAP" : "\/assets\/NeedTickets.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/Shakespeare.jpeg" : {
+      "ft" : 16384,
+      "iS" : 2680568,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/Shakespeare.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/shakespeare1.jpg" : {
+      "ft" : 16384,
+      "iS" : 965191,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/shakespeare1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/shakespeare2.jpg" : {
+      "ft" : 16384,
+      "iS" : 767505,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/shakespeare2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/shakespeare3.jpg" : {
+      "ft" : 16384,
+      "iS" : 239882,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/shakespeare3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/ShakespeareUncorked.png" : {
+      "ft" : 32768,
+      "iS" : 2479554,
+      "oA" : 0,
+      "oAP" : "\/assets\/ShakespeareUncorked.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/StageandSip.png" : {
+      "ft" : 32768,
+      "iS" : 348580,
+      "oA" : 0,
+      "oAP" : "\/assets\/StageandSip.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/VirtualPlayhouseTour.jpeg" : {
+      "ft" : 16384,
+      "iS" : 105236,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/VirtualPlayhouseTour.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+>>>>>>> Stashed changes
     "\/deploy\/css\/styles.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -34,6 +164,7 @@
       "oF" : 0,
       "pg" : 0
     },
+<<<<<<< Updated upstream
     "\/deploy\/img\/chonk.png" : {
       "ft" : 32768,
       "iS" : 1088557,
@@ -43,6 +174,17 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+=======
+    "\/deploy\/img\/sillydog.jpg" : {
+      "ft" : 16384,
+      "iS" : 73434,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/sillydog.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+>>>>>>> Stashed changes
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -72,7 +214,11 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/index.html",
+<<<<<<< Updated upstream
       "oF" : 2
+=======
+      "oF" : 3
+>>>>>>> Stashed changes
     },
     "\/dev\/js\/scripts.js" : {
       "bF" : 0,
@@ -278,8 +424,13 @@
   },
   "projectAttributes" : {
     "creationDate" : 673791564.33405399,
+<<<<<<< Updated upstream
     "displayValue" : "Joe-Web-3-Template",
     "displayValueWasSetByUser" : 0,
+=======
+    "displayValue" : "EstelleGuillot-Web-3-Midterm",
+    "displayValueWasSetByUser" : 1,
+>>>>>>> Stashed changes
     "iconImageName" : "brackets-unblue",
     "iconImageWasSetByUser" : 0
   },
@@ -797,6 +948,13 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+<<<<<<< Updated upstream
+=======
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
+>>>>>>> Stashed changes
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -957,6 +1115,12 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+<<<<<<< Updated upstream
+=======
+      "no-empty-static-block" : {
+        "active" : 0
+      },
+>>>>>>> Stashed changes
       "no-eq-null" : {
         "active" : 0
       },
@@ -988,7 +1152,12 @@
         "active" : 1
       },
       "no-fallthrough" : {
+<<<<<<< Updated upstream
         "active" : 1
+=======
+        "active" : 1,
+        "optionString" : "{'allowEmptyCase': false}"
+>>>>>>> Stashed changes
       },
       "no-floating-decimal" : {
         "active" : 0
@@ -1096,6 +1265,12 @@
       "no-new-func" : {
         "active" : 0
       },
+<<<<<<< Updated upstream
+=======
+      "no-new-native-nonconstructor" : {
+        "active" : 0
+      },
+>>>>>>> Stashed changes
       "no-new-object" : {
         "active" : 0
       },
@@ -1150,7 +1325,12 @@
         "optionString" : "'event', 'fdescribe'"
       },
       "no-restricted-imports" : {
+<<<<<<< Updated upstream
         "active" : 0
+=======
+        "active" : 0,
+        "optionString" : ""
+>>>>>>> Stashed changes
       },
       "no-restricted-properties" : {
         "active" : 0,
@@ -1778,6 +1958,10 @@
       "createDeclarationFile" : 0,
       "jsxMode" : 0,
       "minifierStyle" : 0,
+<<<<<<< Updated upstream
+=======
+      "moduleDetectionType" : 0,
+>>>>>>> Stashed changes
       "moduleResolutionType" : 0,
       "moduleType" : 2,
       "removeComments" : 0,
@@ -1834,6 +2018,10 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+<<<<<<< Updated upstream
+=======
+    "rollupTreeshakingModuleSideEffects" : 1,
+>>>>>>> Stashed changes
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
@@ -1908,7 +2096,11 @@
       },
       "comments" : {
         "active" : 0,
+<<<<<<< Updated upstream
         "flagValue" : -1
+=======
+        "flagValue" : 1
+>>>>>>> Stashed changes
       },
       "comparisons" : {
         "active" : 1,
