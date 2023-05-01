@@ -1,0 +1,30 @@
+/* =============
+    Footer
+============= */
+
+footer{
+
+    background: #2C2C2C;
+
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "icons locations"
+        ". button"
+        ;
+
+        .icons{
+            grid-area:icons;
+        }
+
+        .locations{
+            grid-area:locations;
+        }
+
+        .button{
+            grid-area: button;
+        }
+}
+
+}

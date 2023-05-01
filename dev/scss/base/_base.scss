@@ -1,0 +1,172 @@
+/* =============
+    Base
+============= */
+
+.large-images{
+    width:100%;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: 
+     ". content ."
+    ;
+}
+
+.content{
+    grid-area:content;
+}
+
+/* =============
+    I will organize all of this code once I figure out how to make new scss folders
+============= */
+
+.footer{
+    background-color: #2c2c2c;
+}
+
+.socials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "youtube twitter instagram facebook"
+    ;
+
+    .youtube{
+        grid-area:youtube;
+    }
+
+    .twitter{
+        grid-area:twitter;
+    }
+
+    .instagram{
+        grid-area: instagram;
+    }
+    
+    .facebook{
+        grid-area: facebook;
+    }
+}
+
+.headline1 {
+
+    background-color: #E38E00;
+    display:grid;
+    grid-template-columns: 16px auto auto 16 px;
+    grid-template-areas:
+        ". desc1 details1 ."
+        ;
+
+    }
+
+    .desc1{
+        grid-area:desc1;
+    }
+
+    .details1{
+        grid-area:details1;
+    }
+
+.headline2 {
+
+    background-color: #FDB846;
+    display:grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas:
+        ". desc2 details2 ."
+        ;
+
+    }
+
+    .desc2{
+        grid-area:desc2;
+    }
+
+    .details2{
+        grid-area:details2;
+    }
+
+
+.cards {
+
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas:
+      ". box-one ."
+      ". box-two ."
+      ". box-three ."
+      ". box-four ."
+      ". box-five ."
+       ;
+    gap:0px;
+  }
+
+  .box-one{
+    background-color: #F0F0F0;
+    grid-area:box-one;
+  }
+
+  .box-two{
+    background-color: #F0F0F0;
+    grid-area:box-two;
+  }
+
+  .box-three{
+    background-color: #F0F0F0;
+    grid-area:box-three;
+  }
+
+  .box-four{
+    background-color: #F0F0F0;
+    grid-area:box-four;
+  }
+
+  .box-five{
+    background: #F0F0F0;
+    grid-area:box-five;
+  }
+
+.buttons {
+
+    background-color: #E3E3E3;
+    display:grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas:
+        ". buttondesc buttonimg ."
+        ;
+
+    }
+
+    .buttondesc{
+        grid-area:buttondesc;
+    }
+
+    .buttonimg{
+        grid-area:buttonimg;
+    }
+
+.gallery {
+
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     "photo1"
+     "photo2"
+     "photo3"
+    ;
+
+    .photo1{
+        grid-area:photo1;
+    }
+
+    .photo2{
+        grid-area:photo2;
+    }
+
+    .photo3{
+        grid-area:photo3;
+    }
+}
