@@ -1,0 +1,31 @@
+/* =============
+    buttons
+============= */
+
+.buttons{
+
+    &.seemore{
+
+        @include md{
+            display:grid;
+        grid-template-columns: 16px auto 16px auto 16px;
+        grid-template-areas:
+            ". member . tickets ."
+            ;
+        }
+
+        @include lg{
+            display:grid;
+        grid-template-columns: 16px auto 16px auto 16px;
+        grid-template-areas:
+            ". member . tickets ."
+        }
+
+        @include xl{
+            display:grid;
+        grid-template-columns: 225px auto 16px auto 225px;
+        grid-template-areas:
+            ". member . tickets ."
+        }
+    }
+}

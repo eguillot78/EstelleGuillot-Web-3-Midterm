@@ -12,15 +12,12 @@
     grid-template-areas: 
      ". content ."
     ;
-}
 
-.content{
-    grid-area:content;
-}
+    .content{
+        grid-area:content;
+    }
 
-/* =============
-    I will organize all of this code once I figure out how to make new scss folders
-============= */
+}
 
 .footer{
     background-color: #2c2c2c;
@@ -28,10 +25,15 @@
 
 .socials{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 16px auto auto auto auto 16px;
     grid-template-areas:
-    "youtube twitter instagram facebook"
+    ". followus . . . ."
+    ". youtube twitter instagram facebook ."
     ;
+
+    .followus{
+        grid-area:followus;
+    }
 
     .youtube{
         grid-area:youtube;
@@ -42,54 +44,36 @@
     }
 
     .instagram{
-        grid-area: instagram;
+        grid-area:instagram;
     }
     
     .facebook{
-        grid-area: facebook;
+        grid-area:facebook;
     }
 }
 
-.headline1 {
+.headliners {
 
-    background-color: #E38E00;
     display:grid;
-    grid-template-columns: 16px auto auto 16 px;
-    grid-template-areas:
-        ". desc1 details1 ."
-        ;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: 
+     ". headline1 ."
+     ". headline2 ."
+    ;
 
+    .headline1{
+        background-color: #E38E00;
+        grid-area:headline1;
     }
 
-    .desc1{
-        grid-area:desc1;
+    .headline2{
+        background-color: #FDB846;
+        grid-area:headline2;
     }
 
-    .details1{
-        grid-area:details1;
-    }
+}
 
-.headline2 {
-
-    background-color: #FDB846;
-    display:grid;
-    grid-template-columns: 16px auto auto 16px;
-    grid-template-areas:
-        ". desc2 details2 ."
-        ;
-
-    }
-
-    .desc2{
-        grid-area:desc2;
-    }
-
-    .details2{
-        grid-area:details2;
-    }
-
-
-.cards {
+.whatsnew {
 
     font-size: 20px;
     display: grid;
@@ -101,54 +85,56 @@
       ". box-four ."
       ". box-five ."
        ;
-    gap:0px;
+
+       .box-one{
+        background-color: #F0F0F0;
+        grid-area:box-one;
+      }
+    
+      .box-two{
+        background-color: #F0F0F0;
+        grid-area:box-two;
+      }
+    
+      .box-three{
+        background-color: #F0F0F0;
+        grid-area:box-three;
+      }
+    
+      .box-four{
+        background-color: #F0F0F0;
+        grid-area:box-four;
+      }
+    
+      .box-five{
+        background: #F0F0F0;
+        grid-area:box-five;
+      }
+
   }
 
-  .box-one{
-    background-color: #F0F0F0;
-    grid-area:box-one;
-  }
+.seemore {
 
-  .box-two{
-    background-color: #F0F0F0;
-    grid-area:box-two;
-  }
-
-  .box-three{
-    background-color: #F0F0F0;
-    grid-area:box-three;
-  }
-
-  .box-four{
-    background-color: #F0F0F0;
-    grid-area:box-four;
-  }
-
-  .box-five{
-    background: #F0F0F0;
-    grid-area:box-five;
-  }
-
-.buttons {
-
-    background-color: #E3E3E3;
     display:grid;
-    grid-template-columns: 16px auto auto 16px;
+    grid-template-columns: 16px auto 16px;
     grid-template-areas:
-        ". buttondesc buttonimg ."
+        ". member ."
+        ". tickets ."
         ;
 
     }
 
-    .buttondesc{
-        grid-area:buttondesc;
+    .member{
+        background-color: #E3E3E3;
+        grid-area:member;
     }
 
-    .buttonimg{
-        grid-area:buttonimg;
+    .tickets{
+        background-color: #E3E3E3;
+        grid-area:tickets;
     }
 
-.gallery {
+.photos {
 
     display:grid;
     grid-template-columns: 1fr;
@@ -169,4 +155,92 @@
     .photo3{
         grid-area:photo3;
     }
+}
+
+.locations{
+
+    display:grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: 
+    ". locationtitle ."
+     ". contact1 ."
+     ". contact2 ."
+     ". contact3 ."
+    ;
+
+    .locationtitle{
+        grid-area:locationtitle;
+    }
+
+    .contact1{
+        grid-area:contact1;
+    }
+
+    .contact2{
+        grid-area:contact2;
+    }
+
+    .contact3{
+        grid-area:contact3;
+    }
+}
+
+.form{
+
+    display:grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas: 
+     ". newsletter . ."
+     ". searchbar . ."
+     ". . submitbutton ."
+    ;
+
+    .newsletter{
+        grid-area:newsletter;
+    }
+
+    .searchbar{
+        grid-area:searchbar;
+    }
+
+    .submitbutton{
+        grid-area:submitbutton;
+    }
+}
+
+.search{
+    display:grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas: 
+     ". bar enter ."
+    ;
+
+    .bar{
+        grid-area:bar;
+    }
+
+    .enter{
+        grid-area:enter;
+    }
+
+}
+
+@include sm{
+
+}
+
+@include md{
+
+}
+
+@include lg{
+
+}
+
+@include xl{
+
+}
+
+@include xxl{
+
 }

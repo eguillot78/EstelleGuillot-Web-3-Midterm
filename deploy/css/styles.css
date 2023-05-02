@@ -331,22 +331,21 @@ template {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". content .";
 }
-
-.content {
+.container .content {
   grid-area: content;
 }
 
-/* =============
-    I will organize all of this code once I figure out how to make new scss folders
-============= */
 .footer {
   background-color: #2c2c2c;
 }
 
 .socials {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "youtube twitter instagram facebook";
+  grid-template-columns: 16px auto auto auto auto 16px;
+  grid-template-areas: ". followus . . . ." ". youtube twitter instagram facebook .";
+}
+.socials .followus {
+  grid-area: followus;
 }
 .socials .youtube {
   grid-area: youtube;
@@ -361,97 +360,121 @@ template {
   grid-area: facebook;
 }
 
-.headline1 {
+.headliners {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". headline1 ." ". headline2 .";
+}
+.headliners .headline1 {
   background-color: #E38E00;
-  display: grid;
-  grid-template-columns: 16px auto auto 16 px;
-  grid-template-areas: ". desc1 details1 .";
+  grid-area: headline1;
 }
-
-.desc1 {
-  grid-area: desc1;
-}
-
-.details1 {
-  grid-area: details1;
-}
-
-.headline2 {
+.headliners .headline2 {
   background-color: #FDB846;
-  display: grid;
-  grid-template-columns: 16px auto auto 16px;
-  grid-template-areas: ". desc2 details2 .";
+  grid-area: headline2;
 }
 
-.desc2 {
-  grid-area: desc2;
-}
-
-.details2 {
-  grid-area: details2;
-}
-
-.cards {
+.whatsnew {
   font-size: 20px;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". box-one ." ". box-two ." ". box-three ." ". box-four ." ". box-five .";
-  gap: 0px;
 }
-
-.box-one {
+.whatsnew .box-one {
   background-color: #F0F0F0;
   grid-area: box-one;
 }
-
-.box-two {
+.whatsnew .box-two {
   background-color: #F0F0F0;
   grid-area: box-two;
 }
-
-.box-three {
+.whatsnew .box-three {
   background-color: #F0F0F0;
   grid-area: box-three;
 }
-
-.box-four {
+.whatsnew .box-four {
   background-color: #F0F0F0;
   grid-area: box-four;
 }
-
-.box-five {
+.whatsnew .box-five {
   background: #F0F0F0;
   grid-area: box-five;
 }
 
-.buttons {
-  background-color: #E3E3E3;
+.seemore {
   display: grid;
-  grid-template-columns: 16px auto auto 16px;
-  grid-template-areas: ". buttondesc buttonimg .";
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". member ." ". tickets .";
 }
 
-.buttondesc {
-  grid-area: buttondesc;
+.member {
+  background-color: #E3E3E3;
+  grid-area: member;
 }
 
-.buttonimg {
-  grid-area: buttonimg;
+.tickets {
+  background-color: #E3E3E3;
+  grid-area: tickets;
 }
 
-.gallery {
+.photos {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "photo1" "photo2" "photo3";
 }
-.gallery .photo1 {
+.photos .photo1 {
   grid-area: photo1;
 }
-.gallery .photo2 {
+.photos .photo2 {
   grid-area: photo2;
 }
-.gallery .photo3 {
+.photos .photo3 {
   grid-area: photo3;
+}
+
+.locations {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". locationtitle ." ". contact1 ." ". contact2 ." ". contact3 .";
+}
+.locations .locationtitle {
+  grid-area: locationtitle;
+}
+.locations .contact1 {
+  grid-area: contact1;
+}
+.locations .contact2 {
+  grid-area: contact2;
+}
+.locations .contact3 {
+  grid-area: contact3;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 16px auto auto 16px;
+  grid-template-areas: ". newsletter . ." ". searchbar . ." ". . submitbutton .";
+}
+.form .newsletter {
+  grid-area: newsletter;
+}
+.form .searchbar {
+  grid-area: searchbar;
+}
+.form .submitbutton {
+  grid-area: submitbutton;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 16px auto auto 16px;
+  grid-template-areas: ". bar enter .";
+}
+.search .bar {
+  grid-area: bar;
+}
+.search .enter {
+  grid-area: enter;
 }
 
 /* =============
@@ -498,17 +521,291 @@ header .content {
 footer {
   background: #2C2C2C;
 }
-footer .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "icons locations" ". button";
+@media (min-width: 768px) {
+  footer.foot {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "f1 f2" "f1 f3";
+  }
+  footer.foot .locations {
+    grid-area: f1;
+  }
+  footer.foot .form {
+    grid-area: f2;
+  }
+  footer.foot .socials {
+    grid-area: f3;
+  }
 }
-footer .content .icons {
-  grid-area: icons;
+@media (min-width: 992px) {
+  footer.foot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "f1 f2 f3" "f1 . .";
+  }
+  footer.foot .locations {
+    grid-area: f1;
+  }
+  footer.foot .form {
+    grid-area: f2;
+  }
+  footer.foot .socials {
+    grid-area: f3;
+  }
 }
-footer .content .locations {
-  grid-area: locations;
+@media (min-width: 1200px) {
+  footer.foot {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "f0 f1 f2 f3 f4" "f0 f1 . . f4";
+  }
+  footer.foot .locations {
+    grid-area: f1;
+  }
+  footer.foot .form {
+    grid-area: f2;
+  }
+  footer.foot .socials {
+    grid-area: f3;
+  }
+  footer.foot .f0 {
+    width: 206px;
+    grid-area: f0;
+  }
+  footer.foot .f4 {
+    width: 206px;
+    grid-area: f4;
+  }
 }
-footer .content .button {
-  grid-area: button;
+
+/* =============
+    footer
+============= */
+footer {
+  background: #2C2C2C;
+}
+@media (min-width: 768px) {
+  footer.foot {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "f1 f2" "f1 f3";
+  }
+  footer.foot .locations {
+    grid-area: f1;
+  }
+  footer.foot .form {
+    grid-area: f2;
+  }
+  footer.foot .socials {
+    grid-area: f3;
+  }
+}
+@media (min-width: 992px) {
+  footer.foot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "f1 f2 f3" "f1 . .";
+  }
+  footer.foot .locations {
+    grid-area: f1;
+  }
+  footer.foot .form {
+    grid-area: f2;
+  }
+  footer.foot .socials {
+    grid-area: f3;
+  }
+}
+@media (min-width: 1200px) {
+  footer.foot {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "f0 f1 f2 f3 f4" "f0 f1 . . f4";
+  }
+  footer.foot .locations {
+    grid-area: f1;
+  }
+  footer.foot .form {
+    grid-area: f2;
+  }
+  footer.foot .socials {
+    grid-area: f3;
+  }
+  footer.foot .f0 {
+    width: 206px;
+    grid-area: f0;
+  }
+  footer.foot .f4 {
+    width: 206px;
+    grid-area: f4;
+  }
+}
+
+/* =============
+    buttons
+============= */
+@media (min-width: 768px) {
+  .buttons.seemore {
+    display: grid;
+    grid-template-columns: 16px auto 16px auto 16px;
+    grid-template-areas: ". member . tickets .";
+  }
+}
+@media (min-width: 992px) {
+  .buttons.seemore {
+    display: grid;
+    grid-template-columns: 16px auto 16px auto 16px;
+    grid-template-areas: ". member . tickets .";
+  }
+}
+@media (min-width: 1200px) {
+  .buttons.seemore {
+    display: grid;
+    grid-template-columns: 225px auto 16px auto 225px;
+    grid-template-areas: ". member . tickets .";
+  }
+}
+
+/* =============
+    cards
+============= */
+@media (min-width: 768px) {
+  .card.whatsnew {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "p1 p1 p2 p2" "p3 p3 p4 p4" "p5 p6 p6 p7";
+  }
+  .card.whatsnew .box-one {
+    background-color: #E3E3E3;
+    grid-area: p1;
+  }
+  .card.whatsnew .box-two {
+    background-color: #E3E3E3;
+    grid-area: p2;
+  }
+  .card.whatsnew .box-three {
+    background-color: #E3E3E3;
+    grid-area: p3;
+  }
+  .card.whatsnew .box-four {
+    background-color: #E3E3E3;
+    grid-area: p4;
+  }
+  .card.whatsnew .box-five {
+    background: #E3E3E3;
+    grid-area: p6;
+  }
+}
+@media (min-width: 992px) {
+  .card.whatsnew {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "p1 p1 p2 p2 p3 p3" "p4 p5 p5 p6 p6 p7";
+  }
+  .card.whatsnew .box-one {
+    background-color: #E3E3E3;
+    grid-area: p1;
+  }
+  .card.whatsnew .box-two {
+    background-color: #E3E3E3;
+    grid-area: p2;
+  }
+  .card.whatsnew .box-three {
+    background-color: #E3E3E3;
+    grid-area: p3;
+  }
+  .card.whatsnew .box-four {
+    background-color: #E3E3E3;
+    grid-area: p5;
+  }
+  .card.whatsnew .box-five {
+    background: #E3E3E3;
+    grid-area: p6;
+  }
+}
+@media (min-width: 1200px) {
+  .card.whatsnew {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "p1 p1 p2 p2 p3 p3" "p4 p5 p5 p6 p6 p7";
+  }
+  .card.whatsnew .box-one {
+    background-color: #E3E3E3;
+    grid-area: p1;
+  }
+  .card.whatsnew .box-two {
+    background-color: #E3E3E3;
+    grid-area: p2;
+  }
+  .card.whatsnew .box-three {
+    background-color: #E3E3E3;
+    grid-area: p3;
+  }
+  .card.whatsnew .box-four {
+    background-color: #E3E3E3;
+    grid-area: p5;
+  }
+  .card.whatsnew .box-five {
+    background: #E3E3E3;
+    grid-area: p6;
+  }
+}
+
+/* =============
+    hero
+============= */
+@media (min-width: 768px) {
+  .hero.headliners {
+    display: grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas: ". headline1 headline2 .";
+  }
+}
+@media (min-width: 992px) {
+  .hero.headliners {
+    display: grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas: ". headline1 headline2 .";
+  }
+}
+@media (min-width: 1200px) {
+  .hero.headliners {
+    display: grid;
+    grid-template-columns: 16px auto auto 16px;
+    grid-template-areas: ". headline1 headline2 .";
+  }
+}
+
+/* =============
+    gallery
+============= */
+@media (min-width: 768px) {
+  .gallery.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "photo1 photo2 photo3";
+  }
+}
+@media (min-width: 992px) {
+  .gallery.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "photo1 photo2 photo3";
+  }
+}
+@media (min-width: 1200px) {
+  .gallery.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "p1 p2" "p1 p3";
+  }
+  .gallery.photos .photo1 {
+    grid-area: p1;
+  }
+  .gallery.photos .photo2 {
+    grid-area: p2;
+  }
+  .gallery.photos .photo3 {
+    grid-area: p3;
+  }
 }
