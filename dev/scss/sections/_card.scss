@@ -2,113 +2,209 @@
     cards
 ============= */
 
-.card{
+.whats-new{
 
-    &.whatsnew{
+  padding: 16px 0px 24px 0px;
 
-        @include md{
-            display:grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "p1 p1 p2 p2"
-            "p3 p3 p4 p4"
-            "p5 p6 p6 p7"
-            ;
+  @include md{
+    padding:33px 0px 38px 0px;
+  }
 
-            .box-one{
-                background-color: #E3E3E3;
-                grid-area:p1;
-              }
-            
-              .box-two{
-                background-color: #E3E3E3;
-                grid-area:p2;
-              }
-            
-              .box-three{
-                background-color: #E3E3E3;
-                grid-area:p3;
-              }
-            
-              .box-four{
-                background-color: #E3E3E3;
-                grid-area:p4;
-              }
-            
-              .box-five{
-                background: #E3E3E3;
-                grid-area:p6;
-              }
-        }
+  @include lg{
+    padding:42px 0px 56px 0px;
+  }
 
-        @include lg{
-          display:grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-areas:
-          "p1 p1 p2 p2 p3 p3"
-          "p4 p5 p5 p6 p6 p7"
-          ;
+  @include xl{
+    padding:55px 0px 64px 0px;
+  }
 
-          .box-one{
-              background-color: #E3E3E3;
-              grid-area:p1;
-            }
-          
-            .box-two{
-              background-color: #E3E3E3;
-              grid-area:p2;
-            }
-          
-            .box-three{
-              background-color: #E3E3E3;
-              grid-area:p3;
-            }
-          
-            .box-four{
-              background-color: #E3E3E3;
-              grid-area:p5;
-            }
-          
-            .box-five{
-              background: #E3E3E3;
-              grid-area:p6;
-            }
+  .container{
+
+    h3{
+      padding: 0px 0px 16px 0px;
+
+      @include md{
+        padding:0px 0px 20px 0px;
+      }
+
+      @include lg{
+        padding:0px 0px 15px 0px;
       }
 
       @include xl{
+        padding:0px 0px 15px 0px;
+      }
+    }
+  }
+
+    .whats-new-articles{
+
+      @include md{
         display:grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-        "p1 p1 p2 p2 p3 p3"
-        "p4 p5 p5 p6 p6 p7"
+        grid-template-columns: 15px auto 15px;
+        grid-template-areas:
+        ". articles ."
+        ;
+      }
+
+      @include xl{
+        grid-template-columns: auto 1140px auto;
+      }
+
+      @include xxl{
+        grid-template-columns: auto 1320px auto;
+      }
+
+      ul.article-grid{
+
+        grid-area:articles;
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
         ;
 
-        .box-one{
-            background-color: #E3E3E3;
-            grid-area:p1;
+        margin:0px 0px;
+        padding:0px 0px;
+
+        @include md{
+          grid-area:articles;
+          display:grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-areas:
+          "a1 a1 a2 a2"
+          "a3 a3 a4 a4"
+          ". a5 a5 ."
+          ;
+        }
+
+        @include lg{
+          grid-area:articles;
+          display:grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-template-areas:
+          "a1 a1 a2 a2 a3 a3"
+          ". a4 a4 a5 a5 ."
+          ;
+        }
+
+        li{
+
+          .container{
+
+            background-color: #F0F0F0;
+            padding:9px 9px 19px 9px;
+            margin:0px 0px 16px 0px;
+
+            @include md{
+              background-color: #F0F0F0;
+              padding:18px 18px 24px 18px;
+              margin:0px 0px 0px 0px;
+              grid-template-columns: 15px auto 15px;
+            }
+
+            @include lg{
+              background-color: #F0F0F0;
+              padding:18px 18px 24px 18px;
+              margin:0px 0px 0px 0px;
+              grid-template-columns: 15px auto 15px;
+            }
+
+            @include xl{
+              background-color: #F0F0F0;
+              padding:18px 18px 24px 18px;
+              margin:0px 0px 0px 0px;
+              grid-template-columns: 15px auto 15px;
+            }
+
           }
-        
-          .box-two{
-            background-color: #E3E3E3;
-            grid-area:p2;
+
+          &.article-1{
+
+            grid-area:a1;
+
+            @include md{
+              padding:0px 8px 16px 0px;
+            }
+
+            @include lg{
+              padding:0px 8px 16px 0px;
+            }
           }
-        
-          .box-three{
-            background-color: #E3E3E3;
-            grid-area:p3;
+
+          &.article-2{
+
+            grid-area:a2;
+
+            @include md{
+              padding:0px 0px 16px 8px;
+            }
+
+            @include lg{
+              padding:0px 8px 16px 8px;
+            }
           }
-        
-          .box-four{
-            background-color: #E3E3E3;
-            grid-area:p5;
+
+          &.article-3{
+
+            grid-area:a3;
+
+            @include md{
+              padding:0px 8px 16px 0px;
+            }
+
+            @include lg{
+              padding:0px 0px 16px 8px;
+            }
           }
-        
-          .box-five{
-            background: #E3E3E3;
-            grid-area:p6;
+
+          &.article-4{
+
+            grid-area:a4;
+
+            @include md{
+              padding:0px 0px 16px 8px;
+            }
+
+            @include lg{
+              padding:0px 8px 0px 0px;
+            }
           }
+
+          &.article-5{
+
+            grid-area:a5;
+
+            @include md{
+              padding: 0px 0px 0px 0px;
+            }
+
+            @include lg{
+              padding:0px 0px 0px 8px;
+            }
+          }
+        }
+      }
     }
 
+    .whats-new-title{
 
+      padding:0px 0px 13px 0px;
+
+      @include md{
+        padding:0px 0px 21px 0px;
+      }
+    
+      @include lg{
+        padding:0px 0px 22px 0px;
+      }
+    
+      @include xl{
+        padding:0px 0px 11px 0px;
+      }
     }
 }

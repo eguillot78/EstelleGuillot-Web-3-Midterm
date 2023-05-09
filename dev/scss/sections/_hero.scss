@@ -4,30 +4,29 @@
 
 .hero{
 
-    &.headliners{
+    &.hero-content{
 
-        @include md{
+        @include md {
             display:grid;
-        grid-template-columns: 16px auto auto 16px;
-        grid-template-areas:
-            ". headline1 headline2 ."
-            ;
+        grid-template-columns: 40% 60%;
         }
 
-        @include lg{
-            display:grid;
-        grid-template-columns: 16px auto auto 16px;
-        grid-template-areas:
-            ". headline1 headline2 ."
-            ;
+        @include lg {
+        grid-template-columns: 50% 50%;
         }
 
-        @include xl{
-            display:grid;
-        grid-template-columns: 16px auto auto 16px;
-        grid-template-areas:
-            ". headline1 headline2 ."
-            ;
+        .hero-content-left.container{
+            background-color: #E38E00;
+            @include lg {
+                grid-template-columns: auto auto 16px;
+            }
         }
+        .hero-content-right.container{
+            background-color: #FDB846;
+            @include lg {
+                grid-template-columns: 16px auto auto;
+            }
+        }
+
     }
 }

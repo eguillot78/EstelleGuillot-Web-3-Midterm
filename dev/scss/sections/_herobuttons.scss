@@ -1,0 +1,102 @@
+/* =============
+    buttons
+============= */
+.button-img{
+    
+    @include md{
+        width:113px;
+        height:113px;
+    }
+}
+
+.buttons{
+
+    @include sm{
+        padding:16px 0px 24px 0px;
+    }
+
+    @include md{
+        padding:24px 0px 40px 0px;
+        display:grid;
+        grid-template-columns: 15px 1fr 1fr 15px;
+        grid-template-areas:
+        ". button-1 button-2 ."
+        ;
+    }
+
+    @include lg{
+        padding:24px 0px 56px 0px;
+    }
+
+    @include xl{
+        padding: 28px 0px 64px 0px;
+        display:grid;
+        grid-template-columns: auto 570px 570px auto;
+    }
+
+    @include xxl{
+        display:grid;
+        grid-template-columns: auto 660px 660px auto;
+    }
+
+    .container{
+        @include xl{
+            grid-template-columns: 16px auto 16px;
+        }
+
+        &.button-1{
+
+            background: #E3E3E3;
+            
+            @include md{
+                background: #FFFF;
+                padding:0px 0px 0px 0px;
+                grid-area:button-1;
+            }
+        }
+
+        &.button-2{
+
+            background: #E3E3E3;
+
+            @include md{
+                background: #FFFF;
+                padding:0px 0px 0px 0px;
+                grid-area:button-2;
+            }
+        }
+
+        .content{
+            background: #E3E3E3;
+            padding:25px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+            "h2 img"
+            "a img"
+            ;
+
+            h2{
+                grid-area:h2;
+            }
+
+            img{
+                grid-area:img;
+            }
+
+            a{
+                grid-area:a;
+            }
+        }
+    }
+}
+
+.button-1{
+    grid-area:button-1;
+
+}
+
+.button-2{
+    grid-area:button-2;
+
+}

@@ -3,82 +3,136 @@
 ============= */
 
 footer{
-
+    
     background: #2C2C2C;
+    color: #C5C1BC;
+    padding:16px 0px 0px 0px;
 
-    &.foot{
+    @include md{
+        padding:0px 0px 0px 0px;
+    }
+
+    @include lg{
+        padding:0px 0px 0px 0px;
+    }
+
+    @include xl{
+        padding:0px 0px 0px 0px;
+    }
+
+    .container{
+        @include sm{
+            margin:24px 0px 0px 0px;
+        }
+    }
+
+    h4{
+        
+        padding:0px 0px 18px 0px;
+        color: white;
 
         @include md{
-            display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "f1 f2"
-            "f1 f3"
-            ;
-
-            .locations{
-                grid-area:f1;
-            }
-
-            .form{
-                grid-area:f2;
-            }
-
-            .socials{
-                grid-area:f3;
-            }
+            padding:0px 0px 26px 0px;
         }
 
         @include lg{
-            display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "f1 f2 f3"
-            "f1 . ."
-            ;
-
-            .locations{
-                grid-area:f1;
-            }
-
-            .form{
-                grid-area:f2;
-            }
-
-            .socials{
-                grid-area:f3;
-            }
+            padding:0px 0px 17px 0px;
         }
 
         @include xl{
+            padding:0px 0px 19px 0px;
+        }
+        
+    }
+
+    .locations{
+        @include sm{
+            padding:15px 0px 19px 0px;
+        }
+    
+        @include md{
+            padding:21px 0px 39px 0px;
+        }
+    
+        @include lg{
+            padding:42px 0px 48px 0px;
+        }
+    
+        @include xl{
+            padding:64px 0px 45px 0px;
+        }
+    }
+
+    .newsletter{
+
+        @include sm{
+            padding:15px 0px 4px 0px;
+        }
+    
+        @include md{
+            padding:21px 0px 0px 0px;
+        }
+    
+        @include lg{
+            padding:42px 0px 0px 0px;
+        }
+    
+        @include xl{
+            padding:64px 0px 0px 0px;
+        }
+    }
+
+    .follow{
+
+        padding:4px 0px 19px 0px;
+    
+        @include md{
+            padding:21px 0px 0px 0px;
+        }
+    
+        @include lg{
+            padding:42px 0px 0px 0px;
+        }
+    
+        @include xl{
+            padding:64px 0px 0px 0px;
+        }
+    }
+
+    .content{
+
+        @include md{
             display:grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-areas:
-            "f0 f1 f2 f3 f4"
-            "f0 f1 . . f4"
-            ;
+            grid-template-columns: 50% auto;
+            grid-template-areas:
+            "locations newsletter"
+            "locations follow";
+        }
 
-            .locations{
-                grid-area:f1;
-            }
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "locations newsletter follow"
+        }
 
-            .form{
-                grid-area:f2;
-            }
+        .locations{
 
-            .socials{
-                grid-area:f3;
-            }
+            @include md{
+                grid-area:locations;
+        }
 
-            .f0{
-                width: 206px;
-                grid-area:f0;
+        .newsletter{
+            @include md{
+                grid-area:newsletter;
             }
+        }
 
-            .f4{
-                width: 206px;
-                grid-area:f4;
+        .follow{
+            @include md{
+                grid-area:follow;
             }
+        }
+
         }
     }
 }

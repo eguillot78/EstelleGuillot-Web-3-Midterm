@@ -6,20 +6,68 @@
 
     &.photos{
 
-        @include md{
-            display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        @include sm{
+        display:grid;
+        grid-template-columns: 100%;
         grid-template-areas:
-            "photo1 photo2 photo3"
+            "photo1"
+            "photo2"
+            "photo3"
             ;
+
+            .photo1{
+                grid-area:photo1;
+            }
+
+            .photo2{
+                grid-area:photo2;
+            }
+
+            .photo3{
+                display: none;
+            }
+        }
+
+        @include md{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "photo1 photo2"
+            "photo3 ."
+            ;
+
+            .photo1{
+                grid-area:photo1;
+            }
+
+            .photo2{
+                grid-area:photo2;
+            }
+
+            .photo3{
+                display: none;
+            }
         }
 
         @include lg{
-            display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display:grid;
+        grid-template-columns: 50% 50%;
         grid-template-areas:
-            "photo1 photo2 photo3"
+            "photo1 photo2"
+            "photo3 ."
             ;
+
+            .photo1{
+                grid-area:photo1;
+            }
+
+            .photo2{
+                grid-area:photo2;
+            }
+
+            .photo3{
+                display: none;
+            }
         }
 
         @include xl{
@@ -40,6 +88,7 @@
 
             .photo3{
                 grid-area:p3;
+                display: inline;
             }
         }
     }

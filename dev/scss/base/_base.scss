@@ -13,126 +13,34 @@
      ". content ."
     ;
 
+    @include xl{
+        grid-template-columns: auto 1140px auto;
+    }
+
+    @include xxl{
+        grid-template-columns: auto 1320px auto;
+    }
+
     .content{
         grid-area:content;
     }
 
 }
 
-.footer{
-    background-color: #2c2c2c;
+ul {
+    padding: 0px;
+    list-style-type: none;
 }
 
-.socials{
-    display: grid;
-    grid-template-columns: 16px auto auto auto auto 16px;
-    grid-template-areas:
-    ". followus . . . ."
-    ". youtube twitter instagram facebook ."
-    ;
-
-    .followus{
-        grid-area:followus;
-    }
-
-    .youtube{
-        grid-area:youtube;
-    }
-
-    .twitter{
-        grid-area:twitter;
-    }
-
-    .instagram{
-        grid-area:instagram;
-    }
-    
-    .facebook{
-        grid-area:facebook;
-    }
+p {
+    padding:0px;
+    margin: 0px;
 }
 
-.headliners {
-
-    display:grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: 
-     ". headline1 ."
-     ". headline2 ."
-    ;
-
-    .headline1{
-        background-color: #E38E00;
-        grid-area:headline1;
-    }
-
-    .headline2{
-        background-color: #FDB846;
-        grid-area:headline2;
-    }
-
+h1, h2, h3, h4, h5 {
+    padding:0px;
+    margin: 0px;
 }
-
-.whatsnew {
-
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas:
-      ". box-one ."
-      ". box-two ."
-      ". box-three ."
-      ". box-four ."
-      ". box-five ."
-       ;
-
-       .box-one{
-        background-color: #F0F0F0;
-        grid-area:box-one;
-      }
-    
-      .box-two{
-        background-color: #F0F0F0;
-        grid-area:box-two;
-      }
-    
-      .box-three{
-        background-color: #F0F0F0;
-        grid-area:box-three;
-      }
-    
-      .box-four{
-        background-color: #F0F0F0;
-        grid-area:box-four;
-      }
-    
-      .box-five{
-        background: #F0F0F0;
-        grid-area:box-five;
-      }
-
-  }
-
-.seemore {
-
-    display:grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas:
-        ". member ."
-        ". tickets ."
-        ;
-
-    }
-
-    .member{
-        background-color: #E3E3E3;
-        grid-area:member;
-    }
-
-    .tickets{
-        background-color: #E3E3E3;
-        grid-area:tickets;
-    }
 
 .photos {
 
@@ -154,57 +62,6 @@
 
     .photo3{
         grid-area:photo3;
-    }
-}
-
-.locations{
-
-    display:grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: 
-    ". locationtitle ."
-     ". contact1 ."
-     ". contact2 ."
-     ". contact3 ."
-    ;
-
-    .locationtitle{
-        grid-area:locationtitle;
-    }
-
-    .contact1{
-        grid-area:contact1;
-    }
-
-    .contact2{
-        grid-area:contact2;
-    }
-
-    .contact3{
-        grid-area:contact3;
-    }
-}
-
-.form{
-
-    display:grid;
-    grid-template-columns: 16px auto auto 16px;
-    grid-template-areas: 
-     ". newsletter . ."
-     ". searchbar . ."
-     ". . submitbutton ."
-    ;
-
-    .newsletter{
-        grid-area:newsletter;
-    }
-
-    .searchbar{
-        grid-area:searchbar;
-    }
-
-    .submitbutton{
-        grid-area:submitbutton;
     }
 }
 
