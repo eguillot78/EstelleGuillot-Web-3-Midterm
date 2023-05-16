@@ -4,91 +4,63 @@
 
 .gallery{
 
-    &.photos{
-
-        @include sm{
-        display:grid;
-        grid-template-columns: 100%;
-        grid-template-areas:
-            "photo1"
-            "photo2"
-            "photo3"
-            ;
-
-            .photo1{
-                grid-area:photo1;
-            }
-
-            .photo2{
-                grid-area:photo2;
-            }
-
-            .photo3{
-                display: none;
-            }
-        }
+    ul{
+        list-style:none;
+        padding:0px;
 
         @include md{
-        display:grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas:
-            "photo1 photo2"
-            "photo3 ."
-            ;
-
-            .photo1{
-                grid-area:photo1;
-            }
-
-            .photo2{
-                grid-area:photo2;
-            }
-
-            .photo3{
-                display: none;
-            }
+            display:grid;
+            grid-template-columns: 50% auto;
         }
 
         @include lg{
-        display:grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas:
-            "photo1 photo2"
-            "photo3 ."
-            ;
-
-            .photo1{
-                grid-area:photo1;
-            }
-
-            .photo2{
-                grid-area:photo2;
-            }
-
-            .photo3{
-                display: none;
-            }
+            display:grid;
+            grid-template-columns: 60% auto;
         }
 
         @include xl{
             display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "p1 p2"
-            "p1 p3"
-            ;
+            grid-template-areas:
+            "g1 g2"
+            "g1 g3";
+        }
+    }
 
-            .photo1{
-                grid-area:p1;
+    li{
+        &.photo1{
+            background-image: url("../img/gallery/ComedyofErrorsImg.jpeg");
+            background-size: cover;
+
+            @include xl{
+                grid-area:g1;
             }
 
-            .photo2{
-                grid-area:p2;
+            img{
+                display:none;
+            }
+        }
+
+        &.photo2{
+            @include xl{
+                grid-area:g2;
+            }
+        }
+
+        &.photo3{
+
+            display:block;
+
+            @include md{
+                display:none;
             }
 
-            .photo3{
-                grid-area:p3;
-                display: inline;
+            @include lg{
+                display:none;
+            }
+
+            @include xl{
+                display:block;
+                grid-area:g3;
             }
         }
     }

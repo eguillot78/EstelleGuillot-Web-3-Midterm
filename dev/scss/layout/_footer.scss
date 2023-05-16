@@ -4,46 +4,157 @@
 
 footer{
     
-    background: #2C2C2C;
-    color: #C5C1BC;
-    padding:16px 0px 0px 0px;
+    background: $dark-gray;
+    color: $gray-font;
+    padding-top:20px;
 
-    @include md{
-        padding:0px 0px 0px 0px;
-    }
-
-    @include lg{
-        padding:0px 0px 0px 0px;
-    }
-
-    @include xl{
-        padding:0px 0px 0px 0px;
-    }
-
-    .container{
-        @include sm{
-            margin:24px 0px 0px 0px;
-        }
-    }
-
-    h4{
-        
-        padding:0px 0px 18px 0px;
-        color: white;
+    .content{
 
         @include md{
-            padding:0px 0px 26px 0px;
+            display:grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas:
+            "locations newsletter"
+            "locations follow";
         }
 
         @include lg{
-            padding:0px 0px 17px 0px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "locations newsletter follow"
         }
 
-        @include xl{
-            padding:0px 0px 19px 0px;
+        h4{
+            font-size:20px;
+            color:$white;
         }
-        
-    }
+
+        .locations, .follow{
+            ul{
+                list-style: none;
+                padding:0px;
+
+                img{
+                    padding-right: 10px;
+                }
+
+                h5{
+                    color:$white;
+                    font-size:16px;
+                    margin-bottom: 15px;
+                }
+
+                p{
+                    font-size:12px;
+                    margin-bottom:15px;
+                    span{
+                        display:inline-block;
+                    }
+                }
+
+                a{
+                    color:$gray-font;
+                }
+
+                .border-bottom{
+                    border-bottom: 2px solid $gray-font;
+                    margin: 25px 0px 25px 0px;
+                }
+            }
+        }
+
+        .locations{
+
+            @include md{
+                grid-area:locations;
+        }
+
+            ul{
+                li{
+                    color: $gray-font;
+                }
+            }
+
+         }
+
+
+        .newsletter{
+            @include md{
+                grid-area:newsletter;
+            }
+
+            form{
+                display:flex;
+                flex-flow:wrap;
+                justify-content:end;
+
+                input{
+                    width:100%;
+                    background-color: $gray-font;
+                    color:$black;
+                    padding:15px 10px 15px 10px;
+                    margin:20px 0px 20px 0px;
+                }
+
+                ::placeholder{
+                    color:$black;
+                    opacity: 0.5;
+                }
+
+                ::-ms-input-placeholder{
+                    color:$black;
+                }
+
+                button{
+                    color:$black;
+                    background-color: $yellow;
+                    padding:10px 20px 10px 20px;
+                    text-decoration: none;
+                    text-align:center;
+                    border:none;
+                    transition: .5s;
+
+                }
+
+                button:hover{
+                    background-color: $dark-yellow;
+                  }
+            }
+        }
+
+        .follow{
+            @include md{
+                grid-area:follow;
+            }
+
+            @include lg{
+                text-align:right;
+            }
+
+            ul li{
+                display:inline-block;
+
+                a{
+                    color:$light-gray;
+
+                    i{
+                        font-size:30px;
+                        padding-right:15px;
+                    }
+                }
+
+                @include lg{
+                    &:last-of-type{
+                        a i{
+                            padding-right:0px;
+                        }
+                    }
+                }
+            }
+        }
+
+     }
+ }
 
     .locations{
         @include sm{
@@ -80,7 +191,7 @@ footer{
         @include xl{
             padding:64px 0px 0px 0px;
         }
-    }
+ }
 
     .follow{
 
@@ -97,42 +208,4 @@ footer{
         @include xl{
             padding:64px 0px 0px 0px;
         }
-    }
-
-    .content{
-
-        @include md{
-            display:grid;
-            grid-template-columns: 50% auto;
-            grid-template-areas:
-            "locations newsletter"
-            "locations follow";
-        }
-
-        @include lg{
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-areas:
-            "locations newsletter follow"
-        }
-
-        .locations{
-
-            @include md{
-                grid-area:locations;
-        }
-
-        .newsletter{
-            @include md{
-                grid-area:newsletter;
-            }
-        }
-
-        .follow{
-            @include md{
-                grid-area:follow;
-            }
-        }
-
-        }
-    }
-}
+ }

@@ -4,7 +4,22 @@
 
 .hero{
 
+    img{
+        display:block;
+    }
+
     &.hero-content{
+
+        color: $black;
+
+        a{
+            color: $black;
+            text-decoration: none;
+
+            img{
+                display:inline-block;
+            }
+        }
 
         @include md {
             display:grid;
@@ -15,18 +30,150 @@
         grid-template-columns: 50% 50%;
         }
 
-        .hero-content-left.container{
-            background-color: #E38E00;
-            @include lg {
-                grid-template-columns: auto auto 16px;
-            }
-        }
-        .hero-content-right.container{
-            background-color: #FDB846;
-            @include lg {
-                grid-template-columns: 16px auto auto;
+        .container{
+
+            .content{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                "div link"
+                ;
+
+                .information{
+                    grid-area: div;
+                    align-self:center;
+                }
+
+                a{
+                    grid-area: link;
+                    justify-self:end;
+                    align-self:center;
+
+                    span{
+                        display:none;
+                        padding: 0px 6px 0px 0px;
+
+                        @include lg{
+                            display:inline-block;
+                        }
+                    }
+                }
             }
         }
 
+        .hero-content-left.container{
+            background-color: $dark-yellow;
+            padding:20px;
+            @include lg {
+                grid-template-columns: auto auto 16px;
+            }
+
+            p{
+                margin-bottom: 10px;
+            }
+
+            h3{
+                font-size:18px;
+                margin-bottom:10px;
+            }
+        }
+        .hero-content-right.container{
+            background-color: $yellow;
+            padding:20px;
+            @include lg {
+                grid-template-columns: 16px auto auto;
+            }
+
+            p{
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}
+
+.search {
+
+    margin: 25px 0px 25px 0px;
+
+    &.search-container{
+
+        display:grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: 
+        ". content ."
+        ;
+
+        @include xxl{
+            display:grid;
+            grid-template-columns: 236px auto 236px;
+            grid-template-areas: 
+            ". content ."
+            ;
+        }
+    
+
+        .content{
+
+            form{
+    
+                display:flex;
+    
+                input{
+                    color: $black;
+                    font-size:16px;
+                    font-weight: 300px;
+                    width:100%;
+
+                    padding-right: 16px;
+    
+                    border: none;
+                    border-bottom: 1px solid $yellow;
+
+                    @include md{
+                        font-size:30px;
+                    }
+
+                    @include lg{
+                        font-size:35px;
+                    }
+                }
+            }
+
+            ::placeholder{
+                color: $black;
+                opacity: 0.5;
+            }
+
+            ::-ms-input-placeholder {
+                color: $black;
+            }
+
+            button{
+                background-color: $yellow;
+                border: none;
+                border-radius: 5px;
+                margin-left: 10px;
+                padding:7.5px 12.5px 7.5px 12.5px;
+
+                @include md{
+                    padding: 10px 15px 10px 15px;
+                }
+
+                button:hover{
+                    background-color: $dark-yellow;
+                  }
+
+                img{
+                    width: 25px;
+
+                    @include md{
+                        width:30px;
+                    }
+                }
+            }
+
+            grid-area: content;
+        }
     }
 }

@@ -6,8 +6,82 @@ header{
 
     background: #2C2C2C;
 
-    .content{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+   &.container{
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        align-items: center;
+    
+        height:77px;
+
+        @include md{
+            height:89px;
+        }
+
+        @include lg{
+            height:103px;
+        }
+
+        display:grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: 
+         ". content ."
+        ;
+
+        .content{
+            
+            .logo{
+
+                width: 60px;
+                height: 44px;
+                border: none;
+                display: inline;
+        
+                @include md{
+                    width: 80px;
+                    height: 59px;
+                }
+        
+                @include lg{
+                    width: 92px;
+                    height: 68px;
+                }
+        
+                @include xl{
+                    width: 92px;
+                    height: 68px;
+                }
+
+            }
+        }
+    }
+
+    .logo{
+
+        width: 60px;
+        height: 44px;
+        border: none;
+        display: inline;
+
+        @include md{
+            width: 80px;
+            height: 59px;
+        }
+
+        @include lg{
+            width: 92px;
+            height: 68px;
+        }
+
+        @include xl{
+            width: 92px;
+            height: 68px;
+        }
+
     }
 }

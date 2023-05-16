@@ -5,52 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
     <title>American Shakespeare Center</title>
   </head>
 
   <body>
 
-    <header>
-      <img src="img/logo/ASCLogo.svg" alt="ASC Logo">
+    <header class="header container">
+      <div class="content">
+        <img class="logo" src="img/logo/ASCLogo.svg" alt="ASC Logo">
+      </div>
     </header>
 
     <!-- Search -->
-    <section class="search">
-
-      <div class="bar">
+     <section class="search search-container">
+      <div class="content">
         <form action="#">
           <input type="text" placeholder="Search our productions">
+          <button><img src="img/icons/SearchIcon.svg" alt="Search Icon"></button></input>
         </form>
       </div>
-
-      <div class="enter">
-        <button type="submit">
-          <img src="img/icons/SearchIcon.svg" alt="Search Icon">
-        </button>
-      </div>
-
     </section>
 
     <!-- Hero -->
 
-    <section>
+    <section class="hero">
       <img class="large-images" src="img/hero/Hero.jpg" alt="Main Hero">
     </section>
 
     <!-- Hero Links -->
 
-    <section class="hero">
+    <section class="hero hero-content">
 
       <div class="hero-content-left container">
         <div class="content">
 
-          <div>
+          <div class="information">
             <h3>ASC’s 35th Anniversary Season</h3>
-            <p>Spring season now onstage. Click here for details</p>
+            <p>Spring season now onstage</p>
           </div>
 
-          <a href="#">Details<img src="img/icons/DetailsArrow.svg" alt="Details Arrow"></a>
+          <a href="#"><span>Details</span><img src="img/icons/DetailsArrow.svg" alt="Details Arrow"></a>
 
         </div>
       </div>
@@ -58,12 +57,12 @@
       <div class="hero-content-right container">
         <div class="content">
 
-          <div>
-            <p>Location: Blackfriars Playhouse</p>
-            <p>Dates: February 17-May 13, 2023</p>
+          <div class="information">
+            <p><strong>Location:</strong> Blackfriars Playhouse</p>
+            <p><strong>Dates:</strong> February 17-May 13, 2023</p>
           </div>
 
-          <a href="#">Details<img src="img/icons/DetailsArrow.svg" alt="Details Arrow"></a>
+          <a href="#"><span>Details</span><img src="img/icons/DetailsArrow.svg" alt="Details Arrow"></a>
 
         </div>
       </div>
@@ -79,7 +78,7 @@
       <div class="button-1 container">
         <div class="content">
           <h2>Become an </br> ASC member?</h2>
-          <button>Start Here</button>
+          <a href="#">Start Here</a>
           <img class="button-img" src="img/buttons/Shakespeare.jpg" alt="Member Icon">
         </div>
       </div>
@@ -89,7 +88,7 @@
     <div class="button-2 container">
       <div class="content">
         <h2>Need tickets?</h2>
-        <button>Order Here</button>
+        <a href="#">Order Here</a>
         <img class="button-img" src="img/buttons/NeedTickets.jpg" alt="Need Tickets Icon">
       </div>
     </div>
@@ -100,19 +99,23 @@
 
     <!-- Gallery -->
 
-    <section class="gallery photos">
+    <section class="gallery">
 
-      <div class="photo1">
-        <img class="large-images" src="img/gallery/ComedyofErrorsImg.jpeg" alt="Comedy of Errors Gallery Photo">
-      </div>
+      <ul>
 
-      <div class="photo2">
-        <img class="large-images" src="img/gallery/CaesarImg.jpeg" alt="Caesar Gallery Photo">
-      </div>
+        <li class="photo1">
+          <img class="large-images" src="img/gallery/ComedyofErrorsImg.jpeg" alt="Comedy of Errors Gallery Photo">
+        </li>
+  
+        <li class="photo2">
+          <img class="large-images" src="img/gallery/CaesarImg.jpeg" alt="Caesar Gallery Photo">
+        </li>
+  
+        <li class="photo3">
+          <img class="large-images" src="img/gallery/MuchAdoImg.jpeg" alt="Much Ado Gallery Photo">
+        </li>
 
-      <div class="photo3">
-        <img class="large-images" src="img/gallery/MuchAdoImg.jpeg" alt="Much Ado Gallery Photo">
-      </div>
+      </ul>
       
     </section>
 
@@ -205,14 +208,14 @@
 
           <ul>
 
-            <li>
+            <li class="border-bottom">
               <h5>Connecticut</h5>
               <p><img src="img/icons/Arrow.svg" alt="Arrow Icon"/><span>20 Tolland Turnpike</br>Manchester, CT 06042-1763</span></p>
               <p><img src="img/icons/Mobile.svg" alt="Mobile Icon"/><a href="#">(800) 829-4161</a></p>
               </hr>
             </li>
 
-            <li>
+            <li class="border-bottom">
               <h5>Massachusetts</h5>
               <p><img src="img/icons/Arrow.svg" alt="Arrow Icon"/><span>136 Eastman Street</br>South Easton, MA 02375</span></p>
               <p><img src="img/icons/Mobile.svg" alt="Mobile Icon"/><a href="#">(877) 829-4161</a></p>
@@ -245,22 +248,24 @@
           <h4>Follow Us</h4>
 
           <ul>
-            <li>
-              <a href="#"><img src="img/icons/Youtube.svg" alt="Youtube">
-              </a>
-            </li>
-            <li>
-              <a href="#"><img src="img/icons/Twitter.svg" alt="Twitter">
-              </a>
-            </li>
-            <li>
-              <a href="#"><img src="img/icons/Instagram.svg" alt="Instagram">
-              </a>
-            </li>
-            <li>
-              <a href="#"><img src="img/icons/Facebook.svg" alt="Facebook">
-              </a>
-            </li>
+            <div class="socials">
+              <li>
+                <a href="#"><img class="socialicons" src="img/icons/Youtube.svg" alt="Youtube">
+                </a>
+              </li>
+              <li>
+                <a href="#"><img class="socialicons" src="img/icons/Twitter.svg" alt="Twitter">
+                </a>
+              </li>
+              <li>
+                <a href="#"><img class="socialicons" src="img/icons/Instagram.svg" alt="Instagram">
+                </a>
+              </li>
+              <li>
+                <a href="#"><img class="socialicons" src="img/icons/Facebook.svg" alt="Facebook">
+                </a>
+              </li>
+            </div>
           </ul>
 
         </div>

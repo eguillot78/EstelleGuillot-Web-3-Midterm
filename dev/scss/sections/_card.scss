@@ -4,37 +4,14 @@
 
 .whats-new{
 
-  padding: 16px 0px 24px 0px;
+  margin: 0px 0px 20px 0px;
 
   @include md{
-    padding:33px 0px 38px 0px;
-  }
-
-  @include lg{
-    padding:42px 0px 56px 0px;
+    margin:30px 0px 40px 0px;
   }
 
   @include xl{
-    padding:55px 0px 64px 0px;
-  }
-
-  .container{
-
-    h3{
-      padding: 0px 0px 16px 0px;
-
-      @include md{
-        padding:0px 0px 20px 0px;
-      }
-
-      @include lg{
-        padding:0px 0px 15px 0px;
-      }
-
-      @include xl{
-        padding:0px 0px 15px 0px;
-      }
-    }
+    margin:50px 0px 60px 0px;
   }
 
     .whats-new-articles{
@@ -56,6 +33,13 @@
       }
 
       ul.article-grid{
+
+        list-style: none;
+        padding-left:0px;
+
+        display:grid;
+        grid-template-columns: 100%;
+        gap:15px;
 
         grid-area:articles;
         display:grid;
@@ -94,31 +78,36 @@
 
         li{
 
+          background-color: $extra-light-gray;
+
           .container{
 
-            background-color: #F0F0F0;
-            padding:9px 9px 19px 9px;
-            margin:0px 0px 16px 0px;
-
-            @include md{
-              background-color: #F0F0F0;
-              padding:18px 18px 24px 18px;
-              margin:0px 0px 0px 0px;
-              grid-template-columns: 15px auto 15px;
-            }
-
-            @include lg{
-              background-color: #F0F0F0;
-              padding:18px 18px 24px 18px;
-              margin:0px 0px 0px 0px;
-              grid-template-columns: 15px auto 15px;
-            }
+            padding:15px 0px 35px 0px;
 
             @include xl{
-              background-color: #F0F0F0;
-              padding:18px 18px 24px 18px;
-              margin:0px 0px 0px 0px;
               grid-template-columns: 15px auto 15px;
+            }
+
+            h3{
+              font-size:28px;
+              margin-bottom:10px;
+            }
+
+            p{
+              padding-bottom: 25px;
+            }
+
+            a{
+              color:$black;
+              background-color:$yellow;
+              padding:10px 20px 10px 20px;
+              text-decoration: none;
+              text-align: center;
+              transition: .5s;
+            }
+
+            a:hover{
+              background-color: $dark-yellow;
             }
 
           }
@@ -127,64 +116,30 @@
 
             grid-area:a1;
 
-            @include md{
-              padding:0px 8px 16px 0px;
-            }
-
-            @include lg{
-              padding:0px 8px 16px 0px;
-            }
           }
 
           &.article-2{
 
             grid-area:a2;
 
-            @include md{
-              padding:0px 0px 16px 8px;
-            }
-
-            @include lg{
-              padding:0px 8px 16px 8px;
-            }
           }
 
           &.article-3{
 
             grid-area:a3;
 
-            @include md{
-              padding:0px 8px 16px 0px;
-            }
-
-            @include lg{
-              padding:0px 0px 16px 8px;
-            }
           }
 
           &.article-4{
 
             grid-area:a4;
 
-            @include md{
-              padding:0px 0px 16px 8px;
-            }
-
-            @include lg{
-              padding:0px 8px 0px 0px;
-            }
           }
 
           &.article-5{
 
             grid-area:a5;
 
-            @include md{
-              padding: 0px 0px 0px 0px;
-            }
-
-            @include lg{
-              padding:0px 0px 0px 8px;
             }
           }
         }
@@ -192,6 +147,19 @@
     }
 
     .whats-new-title{
+      h2{
+        font-size: 28px;
+        color:$dark-gray;
+        padding:10px 0px 10px 0px;
+
+        @include lg{
+          font-size: 32px;
+        }
+
+        @include xl{
+          font-size: 48px;
+        }
+      }
 
       padding:0px 0px 13px 0px;
 
@@ -207,4 +175,3 @@
         padding:0px 0px 11px 0px;
       }
     }
-}
