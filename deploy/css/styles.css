@@ -527,6 +527,7 @@ footer {
 }
 @media (min-width: 768px) {
   footer .content {
+    gap: 32px;
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-areas: "locations newsletter" "locations follow";
@@ -991,8 +992,15 @@ footer {
 }
 .hero.hero-content .container .content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 90% 10%;
   grid-template-areas: "div link";
+}
+@media (min-width: 768px) {
+  .hero.hero-content .container .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "div link";
+  }
 }
 .hero.hero-content .container .content .information {
   grid-area: div;

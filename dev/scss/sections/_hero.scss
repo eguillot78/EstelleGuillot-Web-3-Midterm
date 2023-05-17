@@ -34,10 +34,18 @@
 
             .content{
                 display:grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 90% 10%;
                 grid-template-areas:
                 "div link"
                 ;
+
+                @include md{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas:
+                    "div link"
+                    ;
+                }
 
                 .information{
                     grid-area: div;
